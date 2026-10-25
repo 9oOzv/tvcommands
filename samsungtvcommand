@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+ip_file="$HOME/.config/samsungtv/ip.txt"
+token_file="$HOME/.config/samsungtv/token.txt"
+ip="$(<"$ip_file")"
+token="$(<"$token_file")"
+
+exec uvx --from samsungtvws[cli] samsungtv --host "$ip" --token "$token" "$@"

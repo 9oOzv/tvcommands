@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+pushd "$(dirname "${BASH_SOURCE[0]}")"
+
+. ./samsungcommon
+
+menu
+# Aall Settings
+down; enter
+# Picture
+down 4; enter
+# Expert Settings
+down 7; enter
+# Peak Brightness
+up; enter
+# Medium or Off
+enter
+# Peak Brightness
+down 2; enter
+# High
+left; enter
+# Yes
+menu; back 2
+# Exit
+
+popd

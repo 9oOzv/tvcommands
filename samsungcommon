@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+pushd "$(dirname "${BASH_SOURCE[0]}")"
+
+key() { ./samsungtvcommand send-key "$1" --times "${2-1}"; }
+up() { key KEY_UP "$@"; }
+right() { key KEY_RIGHT "$@"; }
+down() { key KEY_DOWN "$@"; }
+left() { key KEY_LEFT "$@"; }
+back() { key KEY_RETURN "$@"; }
+enter() { key KEY_ENTER "$@"; }
+menu() { key KEY_MENU "$@"; }
+
+popd
