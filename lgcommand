@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ip_file="$HOME/lgtv/ip.txt"
+ip_file="$HOME/.config/lgtv/ip.txt"
 ip=$(<"$ip_file")
 
 bscpylgtvcommand $ip "$@"

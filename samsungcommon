@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-pushd "$(dirname "${BASH_SOURCE[0]}")"
+pushd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 
 key() { ./samsungtvcommand send-key "$1" --times "${2-1}"; }
 up() { key KEY_UP "$@"; }
