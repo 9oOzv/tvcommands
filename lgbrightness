@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+cd "$(dirname "$0")"
+
+brightness="${1-100}"
+./lgcommand set_settings picture "{\"backlight\": $brightness}"
