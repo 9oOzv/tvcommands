@@ -3,4 +3,4 @@
 ip_file="$HOME/.config/lgtv/ip.txt"
 ip=$(<"$ip_file")
 
-bscpylgtvcommand $ip "$@"
+exec uvx --from bscpylgtv bscpylgtvcommand "$ip" "$@"
